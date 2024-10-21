@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUD Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            input[type="text"] {
+                width: 400px;
+                height: 33px;
+            }
+            input[type="submit"] {
+                width: 350px;
+                height: 33px;
+                color: white;
+                background-color: #4CAF50;
+                padding: 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <form action="InsertDataServlet" method="POST">
+                <h1>CRUD Application</h1><br>
+                <input type="text" placeholder="Enter User Name" name="uname" required />
+                <br><br>
+                <input type="text" name="name" placeholder="Enter Your Name" required />
+                <br><br>
+                <input type="text" placeholder="Enter Your Email" name="email" required />
+                <br><br>
+                <input type="text" placeholder="Enter Your Phone Number" name="phoneNo" required />
+                <br><br>
+                <input type="text" placeholder="Enter Your Password" name="psw" required />
+                <br><br>
+                <input type="submit" name="submit" value="Insert" />
+            </form>
+
+            <br><hr><br>
+
+            <form action="UpdateDataServlet" method="POST">
+                <h2>Update User Data</h2>
+                <input type="text" placeholder="Enter User Name to Update" name="uname" required />
+                <br><br>
+                <input type="text" name="name" placeholder="Enter New Name" required />
+                <br><br>
+                <input type="text" placeholder="Enter New Email" name="email" required />
+                <br><br>
+                <input type="text" placeholder="Enter New Phone Number" name="phoneNo" required />
+                <br><br>
+                <input type="submit" name="update" value="Update" />
+            </form>
+
+            <br><hr><br>
+
+            <form action="DeleteDataServlet" method="POST">
+                <h2>Delete User Data</h2>
+                <input type="text" placeholder="Enter User Name to Delete" name="uname" required />
+                <br><br>
+                <input type="submit" name="delete" value="Delete" />
+            </form>
+        </center>
+    </body>
+</html>
